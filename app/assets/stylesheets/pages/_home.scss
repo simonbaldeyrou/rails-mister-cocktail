@@ -10,10 +10,12 @@ body{
 .container {
   background-color: #F5FAC8;
   margin-top : 100px;
+  border-radius:10px;
 }
 
 .intro{
-  background-color: #8EA1F0;
+  background-color: #378CE8;
+  opacity:0.8;
   padding-top:10px;
   padding-bottom:10px;
   margin-top:20px;
@@ -26,4 +28,29 @@ body{
 
 td {
   width: 300px;
+}
+
+.accueil {
+  text-align:center;
+  padding-top: 300px;
+}
+
+.accueil h1 {
+  font-size:180px;
+  color:black;
+}
+
+.accueil h2 {
+  font-size:100px;
+  color:black;
+}
+
+.btn-primary {
+  font-size: 40px;
+}
+
+.lasttoadd {
+  text-align:center;
+  padding-top:70px;
+  font-size:20px;
 }

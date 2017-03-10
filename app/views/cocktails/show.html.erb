@@ -5,8 +5,6 @@
         <h1><b><%= @cocktail.name %></b> cocktail </h1>
       </div>
 
-
-
         <table class="table">
           <thead>
             <tr>
@@ -19,14 +17,21 @@
             <tr>
             <td><%=dose.description%></td>
             <td><%= dose.ingredient.name %></td>
-          <td><%= link_to 'Supprimer cette dose', cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' }  %></td>
+          <td><%= link_to 'Supprimer cette dose', cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Etes-vous certain de vouloir supprimer cette dose?' }  %></td>
 
           </tr>
           <%end%>
+
+            <% if @cocktail.photo? %>
+            <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+            <% end %>
+
           </tbody>
         </table>
       </div>
   </div>
+
+
 
 <p><b>Ajoutez une dose:</p>
 <br>

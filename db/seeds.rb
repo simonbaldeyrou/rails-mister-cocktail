@@ -37,3 +37,13 @@ Ingredient.create(name: "Vanilla")
 Ingredient.create(name: "Grapefruit")
 Ingredient.create(name: "Rye whiskey")
 Ingredient.create(name: "Red wine")
+
+
+urls = [
+  'http://img.clubic.com/08254724-photo-xbox-console.jpg',
+  'http://compass.xbox.com/assets/a5/d3/a5d3e0e4-38fd-42ab-90f4-e7b5112af4d1.png'
+]
+
+product = Product.new(name: 'Xbox')
+product.save!
+product.photo_urls = urls # Multi-upload happens here
