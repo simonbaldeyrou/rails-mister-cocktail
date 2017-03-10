@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <div class="intro">
+        <h1>Voici la liste de toutes les doses</h1>
+        </div>
+
+    <table class="table">
+      <thead>
+            <tr>
+              <th>Dose</th>
+              <th>Ingrédient</th>
+            </tr>
+          </thead>
+      <tbody>
+        <% @doses.each do |dose| %>
+          <tr>
+            <td><%= dose.description %></td>
+            <td><%= dose.ingredient.name %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'Ajoutez une dose', new_cocktail_dose_path %>
+    <br>
+
+   </div>
+  </div>
+</div>

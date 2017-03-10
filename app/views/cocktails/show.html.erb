@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="intro">
+        <h1><b><%= @cocktail.name %></b> cocktail </h1>
+      </div>
+
+
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Dose</th>
+              <th>Ingrédient</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @cocktail.doses.each do |dose| %>
+            <tr>
+            <td><%=dose.description%></td>
+            <td><%= dose.ingredient.name %></td>
+          <td><%= link_to 'Supprimer cette dose', cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' }  %></td>
+
+          </tr>
+          <%end%>
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+<p><b>Ajoutez une dose:</p>
+<br>
+
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.error_notification %>
+     <%= f.input :description %>
+     <%= f.association :ingredient  %>
+    <%= f.submit "Ajouter!" %>
+    <% end %>
+
+  <br>
+<%= link_to 'Revenez à la liste des cocktails', cocktails_path %>
+
+   </div>
+ </div>
+</div>
+

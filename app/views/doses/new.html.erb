@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <div class="intro">
+        <h1>Nouvelle dose à enregistrer ?</h1>
+      </div>
+
+    <%= render 'form', dose: @dose %>
+    <%= link_to 'Revenir à la liste des cocktails', cocktails_path %>
+    <%= link_to 'Revenir au cocktail sélectionné', cocktail_path(@cocktail) %>
+
+    </div>
+   </div>
+</div>

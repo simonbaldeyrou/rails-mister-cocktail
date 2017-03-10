@@ -1,0 +1,29 @@
+/* -------------------------------------
+ * CSS code specific to home page
+ * (margin/padding adjustments)
+ * ------------------------------------- */
+body{
+  background-image: url("cocktails.jpg");
+  background-color: #F5FAC8;
+}
+
+.container {
+  background-color: #F5FAC8;
+  margin-top : 100px;
+}
+
+.intro{
+  background-color: #8EA1F0;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:200px;
+  margin-right:200px;
+  text-align:center;
+  border-radius:10px;
+}
+
+td {
+  width: 300px;
+}
